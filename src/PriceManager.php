@@ -124,7 +124,7 @@ abstract class PriceManager
     $this->priceModifier = $this->getPriceModifiersBuilder()->first() ?? new ($this->getPriceModifierModelClass());
   }
 
-  protected function getPriceModifier(): Model
+  public function getPriceModifier(): Model
   {
     if ($this->isModifierSet) {
       return $this->priceModifier;
